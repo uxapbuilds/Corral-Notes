@@ -207,7 +207,8 @@ class _NoteCreateState extends State<NoteCreate> {
     _homeCubit = BlocProvider.of<HomeCubit>(context, listen: false);
     _fTransaction = FirebaseTransaction(collectionId: getCollectionId());
     log('aa ' + _fTransaction.collectionId);
-    _inEdit = widget.isEdit;
+    _inEdit = false;
+    // = widget.isEdit;
     _isShared = widget.isShared;
 
     if (widget.noteData != null) {
@@ -350,7 +351,7 @@ class _NoteCreateState extends State<NoteCreate> {
                 padding: const EdgeInsets.symmetric(
                     vertical: 8.0, horizontal: HORIZONTAL_PADDING - 10),
                 child: TextField(
-                  readOnly: !_inEdit || _isShared,
+                  readOnly: widget.isEdit || _isShared,
                   controller: _noteDesc,
                   decoration: InputDecoration(
                     hintText: _noteDesc.text.isNotEmpty

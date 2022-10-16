@@ -94,7 +94,7 @@ class _HomePageState extends State<HomePage> {
             MaterialPageRoute(
               builder: ((context) => const NoteCreate(
                     isNew: true,
-                    isEdit: true,
+                    // isEdit: true,
                   )),
             ),
           );

@@ -54,7 +54,7 @@ class NoteCard extends StatelessWidget {
                                 isShared: isShared,
                                 fireDocId: fireDocId,
                                 noteData: noteData,
-                                isEdit: false,
+                                isEdit: true,
                               )),
                         ),
                       );

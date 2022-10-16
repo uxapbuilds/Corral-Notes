@@ -23,6 +23,7 @@ dependencies:
   intl: ^0.17.0
   pin_code_fields: ^7.4.0
   flutter_svg: ^1.0.0
+  flutter_launcher_icons: ^0.10.0
 
 dev_dependencies:
   flutter_test:
@@ -35,6 +36,12 @@ flutter:
     - assets/
     - assets/images/
     - assets/fonts/
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/app_icon.png"
+  min_sdk_android: 21    
 
   fonts:
     - family: Hellix
