@@ -66,7 +66,10 @@ Widget deleteDiag(BuildContext context, Function onDelete, Function onCancel) {
                   shape: MaterialStateProperty.all(RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12.0))),
                 ),
-                child: const Text("Cancel"),
+                child: const Text(
+                  "Cancel",
+                  style: TextStyle(color: Colors.black),
+                ),
               ),
               OutlinedButton(
                 onPressed: () {
@@ -76,7 +79,8 @@ Widget deleteDiag(BuildContext context, Function onDelete, Function onCancel) {
                   shape: MaterialStateProperty.all(RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12.0))),
                 ),
-                child: const Text("Delete"),
+                child:
+                    const Text("Delete", style: TextStyle(color: Colors.black)),
               ),
             ],
           )

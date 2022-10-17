@@ -8,6 +8,7 @@ class NoteModel {
   final Timestamp? createdOn;
   final String senderId;
   final String recipientId;
+  final bool isShared;
 
   NoteModel(
       {this.id = '',
@@ -16,6 +17,7 @@ class NoteModel {
       this.description = '',
       this.recipientId = '',
       this.senderId = '',
+      this.isShared = false,
       this.isEncrypted = false});
 
   Map<String, dynamic> toMap() {
@@ -24,6 +26,7 @@ class NoteModel {
       'title': title,
       'recipientId': recipientId,
       'senderId': senderId,
+      'isShared': isShared,
       'createdOn': createdOn,
       'description': description,
       'isEncrypted': isEncrypted
@@ -37,6 +40,7 @@ class NoteModel {
         createdOn: mapData['createdOn'],
         recipientId: mapData['recipientId'] ?? '',
         senderId: mapData['senderId'] ?? '',
+        isShared: mapData['isShared'] ?? false,
         description: mapData['description'] ?? '',
         isEncrypted: mapData['isEncrypted'] ?? false);
   }
